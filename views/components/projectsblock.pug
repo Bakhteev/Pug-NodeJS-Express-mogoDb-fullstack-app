@@ -1,0 +1,34 @@
+mixin col(colType, imgLink, text, small)
+  if small 
+    a(href="" class=`projectsblock__column ${colType}`)
+      .projectsblock__column-inner.flex
+        img(src=imgLink, alt="").projectsblock__img
+        .projectsblock__text-block
+          button.link.link--light
+            span ПОДРОБНЕЕ
+            span.link__arrow &rarr;
+  else  
+    a(href="" class=`projectsblock__column ${colType}`)
+      .projectsblock__column-inner.flex
+        img(src=imgLink, alt="").projectsblock__img
+        .projectsblock__text-block
+          h3.projectsblock__title #{text}
+          button.link.link--light
+            span ПОДРОБНЕЕ
+            span.link__arrow &rarr;
+
+
+section.projectsblock
+  .container
+    h2.title 
+    .row.projectsblock__row 
+      +col('col-6','/img/projectsBlock/projectsblock1.png','ДОСУГОВЫЙ ЦЕНТР')
+      +col('col-6','/img/projectsBlock/projectsblock2.png','ДОСУГОВЫЙ ЦЕНТР')
+    .row.projectsblock__row
+      +col('col-3', '/img/projectsBlock/projectsblock3.png', 'lorem', )
+      +col('col-5', '/img/projectsBlock/projectsblock4.png', 'lorem, ipsum4') 
+      +col('col-4', '/img/projectsBlock/projectsblock5.png', 'lorem', ) 
+    .row.projectsblock__row--bottom
+      a(href="").link.link--dark.projectsblock__link
+        span ВСЕ ПРОЕКТЫ
+        span.link__arrow &rarr;

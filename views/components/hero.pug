@@ -4,7 +4,7 @@ section.hero
   .container 
     .row
       .col-4.flex.hero__title-block 
-        h1.hero__title PROJECT &ensp;
+        h1.title PROJECT &ensp;
           span.hero__title--black NURTOWN
         .row.hero__btn-row
           button.hero__btn.slider-btn-prev &larr;
@@ -16,26 +16,14 @@ section.hero
       .col-8
         .slider-viewport
           .slider
-            .slider-slide
-              .hero__item
-                a(href="").hero__link
-                  span ВЗГЛЯНУТЬ
-                  span.hero__arrow &rarr;
-            .slider-slide
+            -const obj = [1,2,3,4]
+            each item in obj
+              .slider-slide
                 .hero__item
-                  a(href="").hero__link
+                  a(href="").link
                     span ВЗГЛЯНУТЬ
-                    span.hero__arrow &rarr;
-            .slider-slide
-              .hero__item
-                a(href="").hero__link
-                  span ВЗГЛЯНУТЬ
-                  span.hero__arrow &rarr;
-            .slider-slide
-                .hero__item
-                  a(href="").hero__link
-                    span ВЗГЛЯНУТЬ
-                    span.hero__arrow &rarr;
+                    span.link__arrow &rarr;
+                    
 
           
           

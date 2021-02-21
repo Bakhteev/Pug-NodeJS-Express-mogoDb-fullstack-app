@@ -1,17 +1,12 @@
 .hero {
-  &__row {
-  }
   &__title-block {
     flex-direction: column;
     justify-content: center;
   }
   &__title {
-    font-weight: bold;
-    font-size: 64px;
-    line-height: 1;
-    color: $gray;
     &--black {
       color: $black;
+      font-weight: bold;
     }
   }
   &__btn-row {
@@ -27,14 +22,22 @@
     box-sizing: border-box;
     font-size: 20px;
     box-shadow: 1px 3px 15px -6px rgba(0, 0, 0, 0.48);
+    transition: 0.3s;
     &:last-child {
       margin-right: 0;
     }
-    &:hover {
+    &:hover,
+    &:active {
       background: #f9f9f9;
+      &:first-child {
+        padding-right: 5px;
+      }
+      &:last-child {
+        padding-left: 5px;
+      }
     }
   }
-  &__pagination-row{
+  &__pagination-row {
     display: flex;
     align-items: center;
   }
@@ -54,19 +57,5 @@
     height: 829px;
     display: flex;
     align-items: flex-end;
-  }
-  &__link {
-    display: flex;
-    align-items: center;
-    padding: 30px 23px 30px 50px;
-    background: $white;
-    font-size: 12px;
-    line-height: 12px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-  }
-  &__arrow {
-    margin-left: 12px;
-    font-size: 18px;
   }
 }

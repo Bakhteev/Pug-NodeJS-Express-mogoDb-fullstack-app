@@ -1,0 +1,21 @@
+.mainwork {
+  &__title {
+    margin-bottom: 62px;
+  }
+  &__column{
+    align-items: center;
+  }
+  &__number {
+    margin-right: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+    font-size: 200px;
+    line-height: 1.195;
+    color: #f2f2f2;
+  }
+  &__description {
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 1.6;
+  }
+}
