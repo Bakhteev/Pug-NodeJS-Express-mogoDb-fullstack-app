@@ -1,0 +1,32 @@
+body {
+  padding: 0;
+  margin: 0;
+  color: $black;
+  font-family: $Main-Font;
+  font-style: normal;
+  font-weight: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  padding: 0;
+}

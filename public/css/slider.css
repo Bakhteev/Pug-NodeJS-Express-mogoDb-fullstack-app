@@ -1,0 +1,18 @@
+.slider-viewport {
+  width: 770px;
+  height: 100%;
+  overflow: hidden;
+}
+.slider {
+  position: relative;
+  transition: 500ms;
+  width: calc(100% * 5);
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  flex-wrap: nowrap;
+}
+.slider-slide {
+  width: 770px;
+  height: 829px;
+}

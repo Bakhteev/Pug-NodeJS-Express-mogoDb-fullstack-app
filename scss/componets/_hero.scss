@@ -1,0 +1,72 @@
+.hero {
+  &__row {
+  }
+  &__title-block {
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 1;
+    color: $gray;
+    &--black {
+      color: $black;
+    }
+  }
+  &__btn-row {
+    margin: 95px 0;
+  }
+  &__btn {
+    width: 53px;
+    height: 53px;
+    margin-right: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 20px;
+    box-shadow: 1px 3px 15px -6px rgba(0, 0, 0, 0.48);
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      background: #f9f9f9;
+    }
+  }
+  &__pagination-row{
+    display: flex;
+    align-items: center;
+  }
+  &__pagination {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1;
+    color: #bdbdbd;
+    &:nth-child(2) {
+      margin: 0 30px;
+      transform: rotate(10deg);
+    }
+  }
+  &__item {
+    background: url(../img/heroimg.png) no-repeat center, #c4c4c4;
+    width: 770px;
+    height: 829px;
+    display: flex;
+    align-items: flex-end;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 30px 23px 30px 50px;
+    background: $white;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  &__arrow {
+    margin-left: 12px;
+    font-size: 18px;
+  }
+}

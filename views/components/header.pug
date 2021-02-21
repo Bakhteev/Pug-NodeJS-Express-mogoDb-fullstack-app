@@ -1,0 +1,11 @@
+header.header
+  .container
+    .row.header__row
+      .header__logo
+        img(src="/img/logo.svg" alt="logo")
+      nav
+        ul.flex
+          -const links = [{link: '/', text:'ГЛАВНАЯ'},{link: '/about', text:'ГАЛЕРЕЯ'},{link: '', text:'ПРОЕКТЫ'},{link: '', text:'СЕРТИФИКАТЫ'},{link: '', text:'КОНТАКТЫ'},]
+          each item in links
+            li.header__item
+              a.header__link(href=item.link) #{item.text} 

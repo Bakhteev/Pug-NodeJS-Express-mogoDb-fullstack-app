@@ -1,0 +1,21 @@
+.header {
+  &__row {
+    padding: 30px 6px 0 0;
+    justify-content: space-between;
+  }
+  &__item {
+    padding: 4px 0;
+    margin-right: 60px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    &.active {
+      border-color: $black;
+    }
+  }
+  &__link {
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+}
