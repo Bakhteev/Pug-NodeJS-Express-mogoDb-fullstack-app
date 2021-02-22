@@ -5,7 +5,7 @@ header.header
         img(src="/img/logo.svg" alt="logo")
       nav
         ul.flex
-          -const links = [{link: '/', text:'ГЛАВНАЯ'},{link: '/gallery', text:'ГАЛЕРЕЯ'},{link: '/projects', text:'ПРОЕКТЫ'},{link: '/sertificates', text:'СЕРТИФИКАТЫ'},{link: '/contacts', text:'КОНТАКТЫ'},]
+          -const links = [{link: '/', text:'ГЛАВНАЯ'},{link: '/gallery', text:'ГАЛЕРЕЯ'},{link: '/projects', text:'ПРОЕКТЫ'},{link: '/projects/project', text:'СЕРТИФИКАТЫ'},{link: '/contacts', text:'КОНТАКТЫ'},]
           each item in links
             li.header__item
               a.header__link(href=item.link) #{item.text} 

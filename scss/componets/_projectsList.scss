@@ -1,0 +1,32 @@
+.projects {
+  margin-bottom: 120px;
+  &__title-main{
+    margin: 20px 0 60px;
+  }
+  &__item {
+    margin-bottom: 60px;
+  }
+  &__text-block {
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  &__title {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 1.25;
+    color: $gray;
+  }
+  &__description {
+    margin: 25px 0 64px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+  }
+  &__pagination{
+    margin-top: 60px;
+  }
+  &__btns{
+    margin-left: 25px;
+  }
+}

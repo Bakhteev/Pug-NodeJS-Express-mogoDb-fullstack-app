@@ -1,0 +1,26 @@
+//- -const projects = [{img:'/img/projects/project1.png', title:'Общеобразовательная школа', description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'},{img:'/img/projects/project2.png', title:'Паркинг на 500 автомобилей', description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'},{img:'/img/projects/project3.png', title:'Проект интерьера офиса', description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'}]
+
+
+section.projects
+  .container
+    h1.title.projects__title-main НАШИ <br/>
+      span.title--black.title ПРОЕКТЫ
+    each item in projects
+      a(href=`/projects/${item._id}`).projects__item.row 
+        .col-7
+          img(src=item.imgUrl.mainImg, alt="", style="width: 100%")
+        .col-5.projects__text-block
+          h2.projects__title #{item.title}
+          p.projects__description #{item.description}
+          button.link
+            span СМОТРЕТЬ
+            span.link__arrow &rarr;
+    .projects__pagination
+      .row.pagination-row
+        .row.pagination-row
+          span.pagination-number 01
+          span.pagination-number /
+          span.pagination-number 05
+        .row.projects__btns
+          button.pagination-btn &larr;
+          button.pagination-btn &rarr;
