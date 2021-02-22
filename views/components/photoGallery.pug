@@ -1,0 +1,25 @@
+mixin galleryCard(img, text)
+  a(href="").gallery__card.gallery-card
+    img(src=img, alt="")
+    .gallery-card__info
+      p #{text}
+
+-const imgArr = [{img:'/img/gallery/gallery1.png',text:'Описание или пояснение к изображению.'},{img:'/img/gallery/gallery2.png',text:'Описание или пояснение к изображению.'},{img:'/img/gallery/gallery3.png',text:'Описание или пояснение к изображению.'},{img:'/img/gallery/gallery4.png',text:'Описание или пояснение к изображению.'},{img:'/img/gallery/gallery5.png',text:'Описание или пояснение к изображению.'},{img:'/img/gallery/gallery6.png',text:'Описание или пояснение к изображению.'},{img:'/img/gallery/gallery7.png',text:'Описание или пояснение к изображению.'},{img:'/img/gallery/gallery8.png',text:'Описание или пояснение к изображению.'},{img:'/img/gallery/gallery9.png',text:'Описание или пояснение к изображению.'},{img:'/img/gallery/gallery10.png',text:'Описание или пояснение к изображению.'}]
+
+section.gallery
+  .container
+    .h1.title ГАЛЕРЕЯ <br/>
+      span.title.title--black ФОТОГРАФИЙ
+    .row.gallery__row 
+      each card in imgArr
+        +galleryCard(card.img, card.text)
+    .gallery__pagination
+      .row.pagination-row
+        .row.pagination-row
+          span.pagination-number 01
+          span.pagination-number /
+          span.pagination-number 05
+        .row.gallery__btns
+          button.pagination-btn &larr;
+          button.pagination-btn &rarr;
+

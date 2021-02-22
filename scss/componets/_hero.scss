@@ -3,53 +3,8 @@
     flex-direction: column;
     justify-content: center;
   }
-  &__title {
-    &--black {
-      color: $black;
-      font-weight: bold;
-    }
-  }
   &__btn-row {
     margin: 95px 0;
-  }
-  &__btn {
-    width: 53px;
-    height: 53px;
-    margin-right: 23px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    font-size: 20px;
-    box-shadow: 1px 3px 15px -6px rgba(0, 0, 0, 0.48);
-    transition: 0.3s;
-    &:last-child {
-      margin-right: 0;
-    }
-    &:hover,
-    &:active {
-      background: #f9f9f9;
-      &:first-child {
-        padding-right: 5px;
-      }
-      &:last-child {
-        padding-left: 5px;
-      }
-    }
-  }
-  &__pagination-row {
-    display: flex;
-    align-items: center;
-  }
-  &__pagination {
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 1;
-    color: #bdbdbd;
-    &:nth-child(2) {
-      margin: 0 30px;
-      transform: rotate(10deg);
-    }
   }
   &__item {
     background: url(../img/heroimg.png) no-repeat center, #c4c4c4;
