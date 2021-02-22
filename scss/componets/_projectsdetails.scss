@@ -1,0 +1,21 @@
+.projectspage {
+  &__title{
+    margin-bottom: 60px;
+  }
+  &__main-img {
+    min-width: 100%;
+  }
+  &__col-img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  &__text-block{
+    padding-left: 30px;
+    box-sizing: border-box;
+  }
+  &__description {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}

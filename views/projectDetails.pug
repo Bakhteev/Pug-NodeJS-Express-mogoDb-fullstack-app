@@ -7,16 +7,16 @@ block content
   include components/header.pug
   section.projectspage
     .container
-      h1.title #{project.title}
-        span.title--black  
+      h1.title.projectspage__title #{project.title}
       img(src=project.imgUrl.mainImg, alt="").projectspage__main-img
       .row 
         .col-4
-          img(src=project.imgUrl.otherImg[0], alt="")
-        .col-8
+          img(src=project.imgUrl.otherImg[0], alt="").projectspage__col-img
+        .col-8.projectspage__text-block
           p.projectspage__description #{project.description}
       .row
         each img, index in project.imgUrl.otherImg
           img(src=img, alt="")
+
           
   include components/footer.pug

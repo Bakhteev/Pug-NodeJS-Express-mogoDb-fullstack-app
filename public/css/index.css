@@ -245,14 +245,7 @@ input, textarea {
 }
 
 .header__item {
-  padding: 4px 0;
   margin-right: 60px;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-}
-
-.header__item.active {
-  border-color: #333333;
 }
 
 .header__link {
@@ -260,6 +253,13 @@ input, textarea {
   line-height: 1;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  padding: 4px 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.header__link.active {
+  border-color: #333333;
 }
 
 .hero__title-block {
@@ -693,4 +693,29 @@ input, textarea {
 
 .projects__btns {
   margin-left: 25px;
+}
+
+.projectspage__title {
+  margin-bottom: 60px;
+}
+
+.projectspage__main-img {
+  min-width: 100%;
+}
+
+.projectspage__col-img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.projectspage__text-block {
+  padding-left: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.projectspage__description {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 25px;
 }

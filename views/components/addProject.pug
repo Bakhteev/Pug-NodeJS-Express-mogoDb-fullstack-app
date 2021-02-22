@@ -1,0 +1,11 @@
+-const inputs = [{placeholder:'Введите заголовок',name:'title',id:'title'},{placeholder:'Введите url главной картинки',name:'mainImg',id:'mainImg',},{placeholder:'Ввдите url дополнительных картинок(если требуется)',name:'otherImg',id:'otherImg',}]
+
+section.addProject
+  .container 
+    form(action="/projects" method='POST').addProject__form 
+      each input in inputs
+        label(for=input.id) 
+          input(type="text" name=input.name id=input.id placeholder=input.placeholder)
+      label(for="description") 
+        textarea(name='description' id='description')
+      button(type="submit") Отправить

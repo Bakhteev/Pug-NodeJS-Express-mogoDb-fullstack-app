@@ -13,7 +13,6 @@ mongoose
   .catch((err) => console.log('err', err))
 
 app.set('view engine', 'pug')
-// app.set('views', path.join(__dirname, '/views'))
 
 app.use(express.static('public'))
 
@@ -24,8 +23,6 @@ app.use(morgan('dev'))
 app.get('/', (req, res) => res.status(200).render('index'))
 
 app.get('/gallery', (req, res) => res.status(200).render('gallery'))
-
-// app.get('/projects', (req, res) => res.status(200).render('projects'))
 
 app.get('/add-project', (req, res) => {
   const project = new Project({
@@ -48,16 +45,21 @@ app.get('/projects', (req, res) => {
   Project.find().then((result) => res.render('projects', { projects: result }))
 })
 
+app.get('/admin', (req, res) => res.status(200).render('addProjects'))
+
+app.post('/projects', (req, res) => {
+  const project = new Project(req.body)
+  project.save().then(() => {
+    res.redirect('/projects')
+  })
+})
+
 app.get('/projects/:id', (req, res) => {
   const id = req.params.id
   Project.findById(id).then((result) =>
     res.render('projectDetails', { project: result })
   )
 })
-
-// app.get('/projects/project', (req, res) =>
-//   res.status(200).render('projectDetails')
-// )
 
 app.use((req, res) => res.status(404).render('404'))
 
