@@ -32,7 +32,7 @@
       height: 100%;
       position: absolute;
       background: rgba($color: $black, $alpha: 0.8);
-      transition: 0.3s;
+      transition: 0.5s;
     }
   }
   &__text-block {
@@ -40,7 +40,7 @@
     z-index: 1;
     text-align: center;
     opacity: 0;
-    transition: 0.3s;
+    transition: 0.5s;
   }
   &__title {
     font-weight: bold;
@@ -50,8 +50,5 @@
   }
   &__img {
     max-width: 100%;
-  }
-  &__link {
-    align-self: flex-end;
   }
 }

@@ -14,7 +14,7 @@ app.use(morgan('dev'))
 
 app.get('/', (req, res) => res.status(200).render('index'))
 
-app.get('/about', (req, res) => res.status(200).render('about'))
+app.get('/gallery', (req, res) => res.status(200).render('gallery'))
 
 app.use((req, res) => res.status(404).render('404'))
 

@@ -15,7 +15,9 @@ btnNext.addEventListener('click', function () {
     slider.style.transform = `translateX(${-viewSlide * viewport}px)`
     return viewSlide
   } else {
-    viewSlide = slides.length - 1
+    viewSlide = 0
+    sliderCurrent.innerHTML = viewSlide + 1
+    slider.style.transform = `translateX(${-viewSlide * viewport}px)`
     return viewSlide
   }
 })
@@ -31,5 +33,16 @@ btnPrev.addEventListener('click', function () {
     return viewSlide
   }
 })
-
-
+setInterval(() => {
+    if (viewSlide < slides.length - 1) {
+      viewSlide++
+      sliderCurrent.innerHTML = viewSlide + 1
+      slider.style.transform = `translateX(${-viewSlide * viewport}px)`
+      return viewSlide
+    } else {
+      viewSlide = 0
+      sliderCurrent.innerHTML = viewSlide + 1
+      slider.style.transform = `translateX(${-viewSlide * viewport}px)`
+      return viewSlide
+    }
+}, 5000);

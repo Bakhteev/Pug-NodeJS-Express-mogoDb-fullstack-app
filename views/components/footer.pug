@@ -1,5 +1,36 @@
-footer 
-  ul
-    li 1
-    li 2
-    li 3 
+mixin listItems(href, text, img) 
+  if img
+    li.footer__item.flex
+      a(href=href).footer__link.flex  #{text}
+        img(src=img, alt="").footer__icon
+        
+  else
+    li.footer__item 
+      a(href=href).footer__link #{text}
+
+- const infoArr = [{href:'/', text:'Главная'},{href:'/about', text:'Галерея'},{href:'', text:'Проекты'},{href:'', text:'Сертификаты'},{href:'', text:'Контакты'}]
+- const contactsArr= [{href:'', text:'100000, Республика  Казахстан, г. Караганда, ул. Телевизионная 10',img:'/img/footer/adress.svg'},{href:'tel:+7 (701) 77 76 811', text:'+7 (701) 77 76 811',img:'/img/footer/phone.svg'},{href:'mail:Galym.sultanov@mail.ru', text:'Galym.sultanov@mail.ru',img:'/img/footer/mail.svg'}]
+- const socialArr= [{href:'',text:'', img:'/img/footer/facebook.svg'},{href:'', text:'', img:'/img/footer/twitter.svg'},{href:'',text:'', img:'/img/footer/Linkedin.svg'},{href:'',text:'', img:'/img/footer/pininterest.svg'}]
+
+
+footer.footer
+  .container
+    .row.footer__row
+      .footer__logo
+        a(href="")
+          img(src="/img/logo-light.png", alt="")
+      .footer__info
+        h2.footer__title Информация
+        ul.footer__list
+          each item in infoArr
+            +listItems(item.href, item.text)
+      .footer__contacts
+        h2.footer__title Контакты
+        ul.footer__list
+          each item in contactsArr
+            +listItems(item.href, item.text, item.img)
+      .footer__social 
+        h2.footer__title Социальные сети
+        ul.footer__list.flex
+          each item in socialArr
+            +listItems(item.href, item.text, item.img)

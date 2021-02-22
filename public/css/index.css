@@ -59,6 +59,11 @@ button {
   padding: 0;
 }
 
+input, textarea {
+  outline: none;
+  border: none;
+}
+
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -411,9 +416,9 @@ button {
   height: 100%;
   position: absolute;
   background: rgba(51, 51, 51, 0.8);
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .projectsblock__text-block {
@@ -421,9 +426,9 @@ button {
   z-index: 1;
   text-align: center;
   opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .projectsblock__title {
@@ -437,7 +442,157 @@ button {
   max-width: 100%;
 }
 
-.projectsblock__link {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+.contact {
+  margin-bottom: 120px;
+}
+
+.contact .title {
+  margin-bottom: 22px;
+}
+
+.contact__form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.contact__input {
+  margin-bottom: 10px;
+}
+
+.contact__input, .contact__textarea {
+  background: #f3f3f3;
+  padding: 15px 0 15px 21px;
+  width: 94%;
+}
+
+.contact__input::-webkit-input-placeholder, .contact__textarea::-webkit-input-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #BDBDBD;
+}
+
+.contact__input:-ms-input-placeholder, .contact__textarea:-ms-input-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #BDBDBD;
+}
+
+.contact__input::-ms-input-placeholder, .contact__textarea::-ms-input-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #BDBDBD;
+}
+
+.contact__input::placeholder, .contact__textarea::placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #BDBDBD;
+}
+
+.contact__textarea {
+  resize: none;
+  margin-bottom: 22px;
+}
+
+.contact__checkbox-label {
+  position: relative;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: #333333;
+  cursor: pointer;
+}
+
+.contact__checkbox-label p {
+  margin-left: 16px;
+}
+
+.contact__checkbox-label::before {
+  position: absolute;
+  content: '';
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: #f3f3f3;
+  border: 1px solid #333333;
+}
+
+.contact__checkbox:checked + .contact__checkbox-label::before {
+  background: red;
+}
+
+.contact__btn {
+  margin-top: 21px;
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+}
+
+.contact .col-8 img {
+  margin-left: 30px;
+}
+
+.footer {
+  background: #333333;
+  color: #ffffff;
+}
+
+.footer__row {
+  padding: 60px 77px 60px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__contacts {
+  width: 30%;
+}
+
+.footer__title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+.footer__list:last-child {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__item {
+  margin-bottom: 30px;
+  width: 80%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.footer__link {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__icon {
+  margin-right: 14px;
 }

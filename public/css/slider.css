@@ -5,7 +5,7 @@
 }
 .slider {
   position: relative;
-  transition: 500ms;
+  transition: 600ms;
   width: calc(100% * 5);
   height: 100%;
   display: flex;

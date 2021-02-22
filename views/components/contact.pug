@@ -1,0 +1,21 @@
+-const inputs = [{text:'Имя', required: false, id:'name', name,},{text:'Номер телефона', required: true, id:'phoneNumber', name: 'phoneNumber'},{text:'E-mail', required: true, id:'email', name:'email'},{text:'Интересующий товар/услуга', required: false , id:'product', name:'product'}]
+
+section.contact
+  .container
+    h1.title Связаться с нами
+    .row
+      form.col-4.contact__form.flex
+        each input in inputs
+          label(for=input.id)
+            input(type="text" placeholder=input.text id=input.id name=input.name required=input.required).contact__input
+        label(for="message")
+          textarea(name="message", cols="55", rows="8" id="message" placeholder="Сообщение").contact__textarea
+        label(for="checkbox1").contact__checkbox-label.flex   
+          input(type="checkbox" id="checkbox1").contact__checkbox
+          p Отправляя заявку Вы соглашаетесь с политикой конфиденциальности
+        button.link.link--dark.contact__btn
+          span отправить
+          span.link__arrow &rarr;
+      .col-8 
+        img(src="/img/contactimg.png", alt="")
+
